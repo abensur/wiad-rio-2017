@@ -1,4 +1,5 @@
-- Install dependencies: `npm install --global yo gulp-cli`
+- Install gulp: `yarn global add gulp-cli` or `npm install --global gulp-cli`
+- Install dependencies: `yarn` or `npm install`
 - Run `gulp serve` to preview and watch for changes
 - Run `gulp` to build your webapp for production
 - Run `gulp serve:dist` to preview the production build
