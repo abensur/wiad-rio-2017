@@ -31,7 +31,7 @@ gulp.task('html', ['styles'], () => {
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.cssnano({safe: true, autoprefixer: false})))
     .pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('docs'));
 });
 
 gulp.task('images', () => {
@@ -46,7 +46,7 @@ gulp.task('extras', () => {
     '!app/*.html'
   ], {
     dot: true
-  }).pipe(gulp.dest('dist'));
+  }).pipe(gulp.dest('docs'));
 });
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
